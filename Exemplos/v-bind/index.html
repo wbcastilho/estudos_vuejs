@@ -1,0 +1,27 @@
+<!-- Diretiva v-bind atua nos atributos html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">       
+        <p v-bind:title="titulo">Teste com title</p>
+    </div>
+
+    <script type="text/javascript">
+
+        var app = new Vue({
+            el:"#app",
+            data: {               
+                titulo: 'Teste com v-bind'
+            }
+        });
+        
+    </script>
+</body>
+</html>

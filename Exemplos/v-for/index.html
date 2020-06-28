@@ -1,0 +1,32 @@
+<!-- Diretiva v-for -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">        
+        <p v-for="registro in registros">{{ registro.titulo }}</p>
+    </div>
+
+    <script type="text/javascript">
+
+        var app = new Vue({
+            el:"#app",
+            data: {               
+                registros: [
+                    { titulo: 'registro1' },
+                    { titulo: 'registro2' },
+                    { titulo: 'registro3' },
+                    { titulo: 'registro4' }
+                ]
+            }
+        });
+        
+    </script>
+</body>
+</html>

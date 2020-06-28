@@ -1,0 +1,30 @@
+<!-- Diretiva v-model faz as variaveis interagirem com os campos do formulário-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">        
+        <p>
+            <input type="text" v-model="usuario.nome">
+        </p>
+        <p>Nome: {{ usuario.nome }} </p>
+    </div>
+
+    <script type="text/javascript">
+
+        var app = new Vue({
+            el:"#app",
+            data: {                
+                usuario: { nome: '' }
+            }
+        });
+        
+    </script>
+</body>
+</html>

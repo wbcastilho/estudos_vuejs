@@ -1,0 +1,29 @@
+<!-- Formulários - Number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">                        
+        <p>Number: {{idade}} - Tipo: {{typeof idade}}</p>   
+        <p>
+            <input type="number" name="" v-model.number="idade">
+        </p>          
+    </div>
+
+    <script type="text/javascript">
+        
+        var app = new Vue({
+            el:"#app", 
+            data: {                              
+                idade: null               
+            }             
+        });
+        
+    </script>
+</body>
+</html>

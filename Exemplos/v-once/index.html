@@ -1,0 +1,27 @@
+<!-- Diretiva v-once -->
+<!-- v-once renderiza apena uma vez a variável -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Vue JS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">       
+        <p v-once>{{meuTitulo}}</p>
+    </div>
+
+    <script type="text/javascript">
+               
+        var app = new Vue({
+            el:"#app",
+            data: {
+                meuTitulo: 'Esse é o título'               
+            }           
+        });
+        
+    </script>
+</body>
+</html>

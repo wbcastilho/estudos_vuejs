@@ -1,0 +1,28 @@
+<!-- Filtros são utilizados para aplicação de formatações de texto -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ 23.985689 | TrataValor }}</p>
+    </div>
+
+    <script type="text/javascript">
+        
+        var app = new Vue({
+            el:"#app",            
+            filters: {
+                TrataValor: function(valor){
+                    return ('R$ ' + (valor).toFixed(2)).replace('.',',');
+                }
+            }           
+        });
+        
+    </script>
+</body>
+</html>

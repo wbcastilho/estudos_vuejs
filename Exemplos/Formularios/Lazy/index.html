@@ -1,0 +1,32 @@
+<!-- Formulários - Lazy -->
+<!-- O lazy é muito usado em campos texto de pesquisa (search) 
+Somente ao clicar fora do campo ou ao teclar enter ele altera a variável do v-model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">                
+        
+        <p>Lazy: {{busca}}</p>
+        <p>
+            <input type="text" v-model.lazy="busca">
+        </p>        
+        
+    </div>
+
+    <script type="text/javascript">       
+        var app = new Vue({
+            el:"#app", 
+            data: {                              
+                busca: ''                
+            }             
+        });
+        
+    </script>
+</body>
+</html>

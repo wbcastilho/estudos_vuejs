@@ -1,0 +1,36 @@
+<!-- Formulários - Select -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">                        
+
+        <p>Select {{ano}}</p>
+        <p>
+            <select v-model="ano">
+                <option disabled value="">Escolha o ano</option>
+                <option value="2017">Ano 2017</option>
+                <option value="2018">Ano 2018</option>
+                <option value="2019">Ano 2019</option>
+            </select>
+        </p>
+        
+    </div>
+
+    <script type="text/javascript">       
+
+        var app = new Vue({
+            el:"#app", 
+            data: {                                             
+                ano: null               
+            }             
+        });
+        
+    </script>
+</body>
+</html>

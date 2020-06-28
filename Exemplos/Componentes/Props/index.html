@@ -1,0 +1,29 @@
+<!-- Componentes - Personalizando com props -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+
+        <teste titulo="Esse é o título"></teste>
+
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('teste', {
+            props: [ 'titulo' ],
+            template: '<h2>{{ titulo }}</h2>'
+        });
+
+        var app = new Vue({
+            el:"#app"            
+        });
+        
+    </script>
+</body>
+</html>

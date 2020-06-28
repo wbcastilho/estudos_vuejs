@@ -1,0 +1,36 @@
+<!-- Watch - Dispara uma ação toda vez que uma determinada variável for alterada -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">                
+        <p>
+            <input type="text" v-model="nome" placeholder="Nome">
+        </p>
+        <p>Alterações: {{contaAlteracoes}}</p>
+    </div>
+
+    <script type="text/javascript">
+        
+        var app = new Vue({
+            el:"#app", 
+            data: {                              
+                nome: '',
+                contaAlteracoes: 0
+            },                      
+            watch: {
+                nome: function(valor){
+                    this.contaAlteracoes++;
+                    this.nome = valor.toUpperCase();
+                }
+            }          
+        });
+        
+    </script>
+</body>
+</html>

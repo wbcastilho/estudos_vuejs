@@ -1,0 +1,29 @@
+<!-- Diretiva v-if -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">       
+        <p v-if="condicao === 1">Condicao = 1</p>        
+        <p v-else-if="condicao === 2">Condicao = 2</p>        
+        <p v-else>Condicao = 3</p>        
+    </div>
+
+    <script type="text/javascript">
+
+        var app = new Vue({
+            el:"#app",
+            data: {               
+                condicao: 1               
+            }
+        });
+        
+    </script>
+</body>
+</html>

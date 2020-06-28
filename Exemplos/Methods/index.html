@@ -1,0 +1,35 @@
+<!-- Interação e métodos -->
+<!-- Methods - utilize quando irá submeter uma ação como envio de formulário,
+ou seja, quando você tem certeza que ele será executado apenas uma vez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <div id="app">        
+        <button v-if="!clicou" v-on:click="eventoClick">Salvar</button>
+        <button v-if="clicou" v-on:click="eventoClick">Aguarde...</button>
+    </div>
+
+    <script type="text/javascript">
+
+        var app = new Vue({
+            el:"#app",
+            data: {                
+                clicou: false
+            },
+            methods: {
+                eventoClick: function(){
+                    this.clicou = !this.clicou;
+                }
+            }
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- Formulários - Multiselect -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">                                
+
+        <p>Multiple Select {{cores}}</p>
+        <p>
+            <select multiple v-model="cores">
+                <option disabled value="">Escolha as cores</option>
+                <option>Azul</option>
+                <option>Verde</option>
+                <option>Vermelho</option>
+            </select>
+        </p>
+        
+    </div>
+
+    <script type="text/javascript">
+       
+        var app = new Vue({
+            el:"#app", 
+            data: {                                             
+                cores: []
+            }             
+        });
+        
+    </script>
+</body>
+</html>

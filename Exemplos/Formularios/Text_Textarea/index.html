@@ -1,0 +1,36 @@
+<!-- Formulários - Text e Textarea -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos VueJS</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">                       
+        <p>Text: {{texto}}</p>
+        <p>
+            <input type="text" v-model="texto">
+        </p>
+
+        <p>Textarea: {{textarea}}</p>
+        <p style="white-space:pre-line;">{{textarea}}</p>
+        <p>
+            <textarea v-model="textarea" name="name" id="" cols="80" rows="10"></textarea>
+        </p>
+    </div>
+
+    <script type="text/javascript">
+           
+        var app = new Vue({
+            el:"#app", 
+            data: {                              
+                texto: '',
+                textarea: ''
+            }             
+        });
+        
+    </script>
+</body>
+</html>
